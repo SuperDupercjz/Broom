@@ -1,0 +1,47 @@
+#Giphy{
+    margin-top: 8px;
+padding: 10px 50px;
+}
+#Music{
+    margin-top: 8px;
+    padding: 10px 50px;
+}
+#divG{
+  
+    text-align: center;
+}
+#divM{
+    text-align: center;
+}
+#divS{
+    text-align: center;
+    padding-top: 15px;
+}
+.search{
+    padding: 10px;
+}
+.GiphyMusic{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    padding-left: 175px;
+   color: white;
+   margin-top: 20px;
+   background-image: url(https://media0.giphy.com/media/3oEdv2X9swrq7r9iSs/source.gif);
+   background-repeat: no-repeat;
+   background-position: center;
+ 
+}
+.MusicGiphy{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    padding-left: 175px;
+   color: white;
+   margin-top: 20px;
+   background-image: url(https://66.media.tumblr.com/f6c7b32a905e500b94818b2f8d3122a4/tumblr_oe2zsvsDEZ1r2geqjo1_540.gifv);
+   background-repeat: no-repeat;
+   background-position: center;
+}
