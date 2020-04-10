@@ -12,8 +12,16 @@ var settings = {
 	}
 }
 
-$.ajax(settings).done(function (response) {
+$.ajax(settings).then(function (response) {
 	console.log(response);
+	var musicData = response.data;
+for (let i =0; i< musicData.length; i++){
+
+	var newImg = ("<img>");
+	newImg.attr("src", "" + musicData[i].album.cover_medium);
+}
+
+
 });
     
     
