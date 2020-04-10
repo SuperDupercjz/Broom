@@ -4,42 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.css">
       <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- bottom Delopment -->
+    <!-- new...........................................  -->
     <div class="container">
-        <div class="row">
-            <div class="col-5 GiphyMusic">GIPHY</div>
-            <div class="col-2 Broom"></div>
-            <div class="col-5 MusicGiphy" col-6>MUSIC</div>
-        </div>
-    </div>
-    <div class="container">
-    
-      <div class="row">
-        <div id="divG" class="col-5">
-           <input id="Giphy" type="Giphy">
-           <button class="search">Search</button>
-           <!-- ............................................................. -->
-        </div>
-        <div id="divS" class="col-2">
-            <button id="sweep">Sweep</button>
-        </div>
-        <!-- ................................................................ -->
+    <div class="columns">
+        <div class="column is-5  GiphyMusic">GIPHY</div>
+        <div class="column is-2  Broom"></div>
+        <div class="column is-5 MusicGiphy">MUSIC</div>
         
-          <div id="divM" class="col-5">
-            <input id="Music" type="Music">
-            <button class="search">Search</button>
-        </div>
       </div>
     </div>
-
+   
+        <div class="container">
+            <div class="columns">
+                <div id="divG" class="column is-5">
+                    <input id="Giphy" type="Giphy">
+                    <button class="search">Search</button>
+                </div>
+            
+                <div id="divS" class="column is-2">
+                    <button id="sweep">Sweep</button>
+                </div>
+                <div id="divM" class="column is-5">
+                    <input id="Music" type="Music">
+                    <button class="search">Search</button>
+                </div>
+            
+            </div>
+        </div>
+    
     <footer></footer>
   </body>
 </html>
