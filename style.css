@@ -1,3 +1,22 @@
+.div1{
+    width:1000px;
+    height: 600px;
+    border: 5px solid turquoise;
+    box-sizing: border-box;
+    text-align: center;
+    margin:auto;
+    padding:80px;
+}
+
+body{
+    background-image: url(./professional-background-images-for-websites-5.jpg);
+}
+.notification {
+    background-color: turquoise;
+}
+
+
+
 #Giphy{
     margin-top: 8px;
 padding: 10px 50px;
@@ -51,6 +70,7 @@ padding: 10px 50px;
     background-image: url(https://media.tenor.com/images/24a02eaf702e90866b0f8c0cd86748cd/tenor.gif);
     background-repeat: no-repeat;
     background-position: center;
+    background-color: turquoise;
   
 }
 .space{
