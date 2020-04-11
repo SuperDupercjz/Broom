@@ -1,10 +1,21 @@
 $(document).ready(() => {
   $(".search").click(() => {
+    if($("#divA").children().length > 0){
+      $("#divA").slick('unslick');
+      $("#divA").empty()
+  
+    }
+    
     return getGif();
     //$("#divA").empty();
   });
   $("#clear").on("click", function () {
-    $("#divA").empty();
+    if($("#divA").children().length > 0){
+      $("#divA").slick('unslick');
+      $("#divA").empty()
+  
+    }
+    
   });
 });
 
