@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var search = $("#Music").val();
-
+var sweepSong = ""
   var timeElement = $(".currentTime");
   var secondsRemaining = 0;
 
@@ -41,11 +41,30 @@ $(document).ready(function () {
     console.log("playing...");
   });
 
-  $(".toggle-pause").on("click", function () {
-    song.trigger("pause");
-    isPlaying = false;
-    console.log("paused...");
-  });
+
+$("#sweep").on("click", function(event){
+event.preventDefault()
+$(".div1").empty();
+var sweepPlay = $("<button>")
+sweepPlay.attr("id", "sweepPlay")
+sweepPlay.text("Play")
+$(".div1").append(sweepPlay)
+$(".div1").append(song)
+
+song.attr("src", sweepSong);
+
+$("#sweepPlay").on("click", function(event){
+	event.preventDefault();
+	song.trigger("play")
+	isPlaying= true;
+})
+})
+
+//   $(".toggle-pause").on("click", function () {
+//     song.trigger("pause");
+//     isPlaying = false;
+//     console.log("paused...");
+//   });
 
   // $("#divC").on("click", function (event) {
   // 	// audioPlayer.get(0).play()
@@ -91,7 +110,9 @@ $(document).ready(function () {
       }
 
       $("img").on("click", function (event) {
-        song.attr("src", event.target.name);
+		song.attr("src", event.target.name);
+		var selectedSong = event.target.name;
+		sweepSong = selectedSong
         console.log(event.target.name);
       });
 
