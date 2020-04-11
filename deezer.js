@@ -1,6 +1,9 @@
 $(document).ready(function () {
   var search = $("#Music").val();
 
+  var timeElement = $(".currentTime");
+  var secondsRemaining = 0;
+
   $("#Music").keypress(function (event) {
     if (event.keyCode === 13) {
       event.preventDefault();
@@ -19,7 +22,19 @@ $(document).ready(function () {
   });
   $(".toggle-play").on("click", function () {
     song.trigger("play");
-    isPlaying = true;
+	isPlaying = true;
+	var timeIntervalId = setInterval(function(){
+		secondsRemaining++;
+		timeElement.text("00:0" + secondsRemaining)
+		$(".time").val(secondsRemaining);
+		if (secondsRemaining === 7){
+			song.trigger("pause");
+			isPlaying=false;
+			clearInterval(timeIntervalId)
+			secondsRemaining = 0;
+		  }
+	}, 1000);
+
     console.log("playing...");
   });
 
