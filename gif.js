@@ -1,21 +1,17 @@
 $(document).ready(() => {
   $(".search").click(() => {
-    if($("#divA").children().length > 0){
-      $("#divA").slick('unslick');
-      $("#divA").empty()
-  
+    if ($("#divA").children().length > 0) {
+      $("#divA").slick("unslick");
+      $("#divA").empty();
     }
-    
+
     return getGif();
-    //$("#divA").empty();
   });
-  $("#clear").on("click", function () {
-    if($("#divA").children().length > 0){
-      $("#divA").slick('unslick');
-      $("#divA").empty()
-  
+  $("#Giphy").keypress(function (event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      $("#gifButton").click();
     }
-    
   });
 });
 
@@ -49,26 +45,26 @@ function getGif() {
       dots: true,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 600,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true,
-            dots: true,
+            // infinite: true,
+            // dots: true,
           },
         },
         {
-          breakpoint: 600,
+          breakpoint: 2040,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 3,
+            slidesToScroll: 3,
           },
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 3,
+            slidesToScroll: 3,
           },
         },
       ],
