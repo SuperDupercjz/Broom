@@ -5,63 +5,82 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Broom!</title>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="./style.css">
+  
+    <link rel="stylesheet" href="./style.css">			
 </head>
 
 <body>
-<section class="hero is-fullheight is-bold">
-<div class="hero-head">
-    <div class="container  is-widescreen">
-        <div class="notification">
-            <nav class="breadcrumb " aria-label="breadcrumbs">
-                <ul>
-                    <li>
-                        <span class="icon is-small">
-                        </span>
-                        <h1>Broom!</h1>
-                        </a>
-                    </li>
-                    <li>
+    <section class="hero is-fullheight is-bold">
+        <div class="hero-head">
+            <div class="container is-widescreen">
+                <div class="notification">
+                    <nav class="breadcrumb is-centered is-large " aria-label="breadcrumbs">
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/explore">
+                                    <span class="icon is-large">
+                                        <i class="fab fa-twitter"></i>
+                                    </span>
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/login.php">
+                                    <span class="icon is-large">
+                                        <i class="fab fa-facebook-square"></i>
+                                    </span>
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="icon is-large">
+                                    <i class="fas fa-broom"></i>
+                                </span>
+                                <span>Broom!</span>
+                                <span class="icon is-large">
+                                    <i class="fas fa-broom"></i>
+                                </span>
+                            </li>
 
-                        <a href="https://twitter.com/explore">
-                            <span class="icon is-small">
-                                <i class="fab fa-twitter"></i>
-                            </span>
-                            <span>Twitter</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/login.php">
-                            <span class="icon is-small">
-                                <i class="fab fa-facebook-square"></i>
-                            </span>
-                            <span>Facebook</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/accounts/login/">
-                            <span class="icon is-small">
-                                <i class="fab fa-instagram"></i>
-                            </span>
-                            <span>instagram</span>
-                        </a>
-                    </li>
+                            <li>
+                                <a href="https://www.instagram.com/accounts/login/">
+                                    <span class="icon is-large">
+                                        <i class="fab fa-instagram"></i>
+                                    </span>
+                                    <span>instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://accounts.google.com/signup/v2/webcreateaccount?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fe-11-16048806fc444534657fefb78401743b-a5dde0ecb2e654f88750bfd8708150cbdeb4039b&flowName=GlifWebSignIn&flowEntry=SignUp">
+                                    <span class="icon is-large">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span>G-Mail</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
 
-                </ul>
-            </nav>
-           
-        </div>
-    </nav>
-        <div class="field">
-            <div class="control">
-                <textarea class="textarea"></textarea>
+                </div>
+                </nav>
+                <div class="div1">
+                    <p style="background-color: turquoise;"><strong>
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum."</strong>
+                    </p>
+                </div>
+
             </div>
-        </div>
-    </div>
-        <div class="field">
-        </section>
+    </section>
          <!-- bottom Delopment -->
     <!-- new...........................................  -->
     <div class="container">
@@ -84,10 +103,34 @@
                         <button id="sweep">Sweep</button>
                     </div>
                     <div id="divM" class="column is-5">
-                        <input id="Music" type="Music">
-                        <button class="search">Search</button>
+                        <input id="Music" type="text">
+                        <button id="musicButton" class="search">Search</button>
+                        <div class="snd">
+                            <div class="toggle">
+                                <button class="toggle-play">Play</button>
+                                <button class="toggle-pause">Pause</button>
+                            </div>
+                            <input class="time" type="range" value="0" />
+                            <span class="currenttime">00:00</span>/
+                            <span class="duration">00:30</span>   
+                        </div>
                     </div>
                 
+                </div>
+            </div>
+            <div class="container">
+                <div class="columns">
+                    <div id="divA" class="column is-5">
+                      
+                    </div>
+                
+                    <div id="divB" class="column is-2">
+                        
+                    </div>
+                    <div id="divC" class="column is-5">
+                       
+                    </div>
+                 
                 </div>
             </div>
          <footer>
@@ -102,7 +145,20 @@
                 </div>
               </section>
             </footer>
-   
+            <script
+            src="http://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+           
+            
+            
+
+            
+            
+            
+            <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script src="gif/gif.js"></script>
+            <script src="./deezer.js"></script>
 </body>
 
 </html>
