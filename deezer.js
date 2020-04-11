@@ -9,12 +9,11 @@ $(document).ready(function () {
   });
 
   $("#musicButton").on("click", function (event) {
-	event.preventDefault();
-	if($("#divC").children().length > 0){
-		$("#divC").slick('unslick');
-		$("#divC").empty()
-
-	}
+    event.preventDefault();
+    if ($("#divC").children().length > 0) {
+      $("#divC").slick("unslick");
+      $("#divC").empty();
+    }
     search = $("#Music").val();
     musicGrab();
 
@@ -59,11 +58,12 @@ $(document).ready(function () {
       console.log(response);
       var musicData = response.data;
       for (let i = 0; i < musicData.length; i++) {
+        console.log(response);
         var newTitle = $("<h4>");
         var newDiv = $("<div>");
         newDiv.attr("class", "has-text-centered");
-		song.attr("src", musicData[i].preview);
-		newTitle.attr("class", "has-text-white")
+        song.attr("src", musicData[i].preview);
+        newTitle.attr("class", "has-text-white");
         // audioPlayer.attr("class", "play")
         var newImg = $("<img>");
         newTitle.text(musicData[i].title_short);
