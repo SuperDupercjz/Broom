@@ -1,21 +1,27 @@
 .div1{
-    width:1000px;
+    width:200px;
     height: 600px;
     border: 10px solid turquoise;
     box-sizing: border-box;
     text-align: center;
-    margin:auto;
-    padding:80px;
+   /* margin:20px;
+    padding:80px;*/
+}
+.duck{
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 body{
-    /* background-image: url(./professional-background-images-for-websites-5.jpg); */
+    
     background-color: black;
 }
 .notification {
     background-color: turquoise;
 }
-
+.duck{
+    margin: 0 auto !important;;
+}
 
 #Giphy{
     margin-top: 8px;
