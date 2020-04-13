@@ -59,6 +59,7 @@ $(document).ready(function () {
     });
   });
 
+<<<<<<< HEAD
   //   $(".toggle-pause").on("click", function () {
   //     song.trigger("pause");
   //     isPlaying = false;
@@ -71,6 +72,8 @@ $(document).ready(function () {
   // 	$("#divC").append($("<audio>"));
 
   // 	})
+=======
+>>>>>>> 18a3fabea38098f98e7b5c7c8348998072ad35f9
   var isPlaying = false;
   var song = $("<audio>");
   $.get();
