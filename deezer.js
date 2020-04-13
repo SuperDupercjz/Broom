@@ -13,7 +13,10 @@ $(document).ready(function () {
 
   $("#musicButton").on("click", function (event) {
     event.preventDefault();
-    $("#divC").empty();
+    if ($("#divC").children().length > 0) {
+      $("#divC").slick("unslick");
+      $("#divC").empty();
+    }
     search = $("#Music").val();
     musicGrab();
 
@@ -23,6 +26,18 @@ $(document).ready(function () {
   $(".toggle-play").on("click", function () {
     song.trigger("play");
     isPlaying = true;
+    var timeIntervalId = setInterval(function () {
+      secondsRemaining++;
+      timeElement.text("00:0" + secondsRemaining);
+      $(".time").val(secondsRemaining);
+      if (secondsRemaining === 7) {
+        song.trigger("pause");
+        isPlaying = false;
+        clearInterval(timeIntervalId);
+        secondsRemaining = 0;
+      }
+    }, 1000);
+
     console.log("playing...");
   });
 
@@ -76,10 +91,12 @@ $(document).ready(function () {
       console.log(response);
       var musicData = response.data;
       for (let i = 0; i < musicData.length; i++) {
+        console.log(response);
         var newTitle = $("<h4>");
         var newDiv = $("<div>");
         newDiv.attr("class", "has-text-centered");
         song.attr("src", musicData[i].preview);
+        newTitle.attr("class", "has-text-white");
         // audioPlayer.attr("class", "play")
         var newImg = $("<img>");
         newTitle.text(musicData[i].title_short);
