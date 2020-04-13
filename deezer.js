@@ -60,18 +60,6 @@ $("#sweepPlay").on("click", function(event){
 })
 })
 
-//   $(".toggle-pause").on("click", function () {
-//     song.trigger("pause");
-//     isPlaying = false;
-//     console.log("paused...");
-//   });
-
-  // $("#divC").on("click", function (event) {
-  // 	// audioPlayer.get(0).play()
-  // 	console.log(event.target);
-  // 	$("#divC").append($("<audio>"));
-
-  // 	})
   var isPlaying = false;
   var song = $("<audio>");
   $.get();

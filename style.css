@@ -1,11 +1,9 @@
 .div1{
     width:200px;
     height: 600px;
-    border: 10px solid turquoise;
+    border: 11px solid turquoise;
     box-sizing: border-box;
     text-align: center;
-   /* margin:20px;
-    padding:80px;*/
 }
 .duck{
     margin-bottom: 20px;
@@ -50,11 +48,10 @@ padding: 10px 50px;
     padding-bottom: 10px;
     font-size: 40px;
     font-weight: 700;
-    /* padding-left: 180px; */
     text-align: center;
    color: white;
    margin-top: 20px;
-   background-image: url(https://media0.giphy.com/media/3oEdv2X9swrq7r9iSs/source.gif);
+   background-image: url(https://66.media.tumblr.com/e5eadd706d571fe5428ae50fa695cc5b/tumblr_pebu01FUPP1rte5gyo1_540.gifv);
    background-repeat: no-repeat;
    background-position: center;
  
@@ -64,7 +61,6 @@ padding: 10px 50px;
     padding-bottom: 10px;
     font-size: 40px;
     font-weight: 700;
-    /* padding-left: 180px; */
     text-align: center;
    color: white;
    margin-top: 20px;
@@ -72,13 +68,7 @@ padding: 10px 50px;
    background-repeat: no-repeat;
    background-position: center;
 }
-/* .Broom{
-    background-image: url(https://media.tenor.com/images/24a02eaf702e90866b0f8c0cd86748cd/tenor.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
-  
-} */
+
 .space{
     margin-top:200px ;
     text-align: center;
