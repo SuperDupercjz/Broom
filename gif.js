@@ -25,7 +25,7 @@ function getGif() {
   $.ajax({
     url: queryURL,
     method: "GET",
-  }).then(function (response) {
+  }).then((response) => {
     console.log(response);
     let results = response.data;
     for (let i = 0; i < results.length; i++) {
@@ -36,6 +36,8 @@ function getGif() {
 
       $("#divA").prepend(gifDiv);
     }
+
+    console.log($(this).children);
 
     $("#divA").slick({
       autoplay: true,
