@@ -33,11 +33,15 @@ function getGif() {
       let searchedItem = $("<img>");
       searchedItem.attr("src", results[i].images.fixed_height.url);
       gifDiv.append(searchedItem);
-
       $("#divA").prepend(gifDiv);
     }
-
-    console.log($(this).children);
+    $("img").on("click", (event) => {
+      event.preventDefault();
+      let gif = $("<img>");
+      gif.attr("src", event.target.src);
+      $("#divB").append(gif);
+      console.log(selectedGif);
+    });
 
     $("#divA").slick({
       autoplay: true,
