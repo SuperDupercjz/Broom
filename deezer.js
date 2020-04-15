@@ -3,6 +3,10 @@ $(document).ready(function () {
   var sweepSong = "";
   var timeElement = $(".currentTime");
   var secondsRemaining = 0;
+  $("#sweepGifDiv").hide()
+  $("#sweepSongDiv").hide()
+  $("#sweepShare").hide()
+
 
   $("#Music").keypress(function (event) {
     if (event.keyCode === 13) {
@@ -43,14 +47,12 @@ $(document).ready(function () {
 
   $("#sweep").on("click", function (event) {
     event.preventDefault();
-    $(".div1").empty();
-    var sweepPlay = $("<button>");
-    sweepPlay.attr("id", "sweepPlay");
-    sweepPlay.text("Play");
-    $(".div1").append(sweepPlay);
-    $(".div1").append(song);
 
-    song.attr("src", sweepSong);
+
+   $("#sweepTitle").hide();
+   $("#sweepGifDiv").show()
+   $("#sweepSongDiv").show()
+   $("#sweepShare").show()
 
     $("#sweepPlay").on("click", function (event) {
       event.preventDefault();
@@ -100,6 +102,11 @@ $(document).ready(function () {
         song.attr("src", event.target.name);
         var selectedSong = event.target.name;
         sweepSong = selectedSong;
+        var sweepPlay = $("<button>");
+        sweepPlay.attr("id", "sweepPlay");
+        sweepPlay.text("Play");
+        $("#sweepSongDiv").append(sweepPlay);
+        $("#sweepSongDiv").append(song);
         console.log(event.target.name);
       });
 

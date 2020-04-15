@@ -43,7 +43,8 @@ function getGif() {
       event.preventDefault();
       let gif = $("<img>");
       gif.attr("src", event.target.src);
-      $("#divB").append(gif);
+      // $("#divB").append(gif);
+      $("#sweepGifDiv").append(gif);
     });
 
     // $("#divB").slick({
