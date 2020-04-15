@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var search = $("#Music").val();
-
+  var sweepSong = "";
   var timeElement = $(".currentTime");
   var secondsRemaining = 0;
 
@@ -25,34 +25,40 @@ $(document).ready(function () {
   });
   $(".toggle-play").on("click", function () {
     song.trigger("play");
-	isPlaying = true;
-	var timeIntervalId = setInterval(function(){
-		secondsRemaining++;
-		timeElement.text("00:0" + secondsRemaining)
-		$(".time").val(secondsRemaining);
-		if (secondsRemaining === 7){
-			song.trigger("pause");
-			isPlaying=false;
-			clearInterval(timeIntervalId)
-			secondsRemaining = 0;
-		  }
-	}, 1000);
+    isPlaying = true;
+    var timeIntervalId = setInterval(function () {
+      secondsRemaining++;
+      timeElement.text("00:0" + secondsRemaining);
+      $(".time").val(secondsRemaining);
+      if (secondsRemaining === 7) {
+        song.trigger("pause");
+        isPlaying = false;
+        clearInterval(timeIntervalId);
+        secondsRemaining = 0;
+      }
+    }, 1000);
 
     console.log("playing...");
   });
 
-  $(".toggle-pause").on("click", function () {
-    song.trigger("pause");
-    isPlaying = false;
-    console.log("paused...");
+  $("#sweep").on("click", function (event) {
+    event.preventDefault();
+    $(".div1").empty();
+    var sweepPlay = $("<button>");
+    sweepPlay.attr("id", "sweepPlay");
+    sweepPlay.text("Play");
+    $(".div1").append(sweepPlay);
+    $(".div1").append(song);
+
+    song.attr("src", sweepSong);
+
+    $("#sweepPlay").on("click", function (event) {
+      event.preventDefault();
+      song.trigger("play");
+      isPlaying = true;
+    });
   });
 
-  // $("#divC").on("click", function (event) {
-  // 	// audioPlayer.get(0).play()
-  // 	console.log(event.target);
-  // 	$("#divC").append($("<audio>"));
-
-  // 	})
   var isPlaying = false;
   var song = $("<audio>");
   $.get();
@@ -92,6 +98,8 @@ $(document).ready(function () {
 
       $("img").on("click", function (event) {
         song.attr("src", event.target.name);
+        var selectedSong = event.target.name;
+        sweepSong = selectedSong;
         console.log(event.target.name);
       });
 
