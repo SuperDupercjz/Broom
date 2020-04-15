@@ -7,7 +7,7 @@ $(document).ready(() => {
 
     return getGif();
   });
-  $("#Giphy").keypress(function (event) {
+  $("#Giphy").keypress((event) => {
     if (event.keyCode === 13) {
       event.preventDefault();
       $("#gifButton").click();
@@ -33,12 +33,47 @@ function getGif() {
       let searchedItem = $("<img>");
       searchedItem.attr("src", results[i].images.fixed_height.url);
       gifDiv.append(searchedItem);
-
       $("#divA").prepend(gifDiv);
     }
+    $("img").on("click", (event) => {
+      event.preventDefault();
+      let gif = $("<img>");
+      gif.attr("src", event.target.src);
+      $("#divB").append(gif);
+    });
 
-    console.log($(this).children);
-
+    // $("#divB").slick({
+    //   autoplay: true,
+    //   dots: true,
+    //   speed: 300,
+    //   autoplaySpeed: 2000,
+    //   dots: true,
+    //   responsive: [
+    //     {
+    //       breakpoint: 600,
+    //       settings: {
+    //         slidesToShow: 3,
+    //         slidesToScroll: 3,
+    //         // infinite: true,
+    //         // dots: true,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 2040,
+    //       settings: {
+    //         slidesToShow: 3,
+    //         slidesToScroll: 3,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 480,
+    //       settings: {
+    //         slidesToShow: 3,
+    //         slidesToScroll: 3,
+    //       },
+    //     },
+    //   ],
+    // });
     $("#divA").slick({
       autoplay: true,
       dots: true,
