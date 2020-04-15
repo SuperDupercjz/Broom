@@ -41,6 +41,8 @@ function getGif() {
     }
     $("img").on("click", (event) => {
       event.preventDefault();
+      $("#sweepGifDiv").empty()
+
       let gif = $("<img>");
       gif.attr("src", event.target.src);
       // $("#divB").append(gif);
