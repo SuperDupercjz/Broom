@@ -17,10 +17,14 @@ $(document).ready(() => {
 
 function getGif() {
   let searchbtn = $("#Giphy").val();
+  let apiKey = "dc6zaTOxFJmzC";
+  let apiKey2 = "pCaC6QPrv0rNrBd99YyoIX3eYDk9pHxC";
   var queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" +
     searchbtn +
-    "&api_key=dc6zaTOxFJmzC&limit=25";
+    "&api_key=" +
+    apiKey2 +
+    "&limit=25";
 
   $.ajax({
     url: queryURL,
