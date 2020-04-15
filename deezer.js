@@ -27,6 +27,7 @@ $(document).ready(function () {
     // $("#Music").val("");
     console.log(search);
   });
+
   $(".toggle-play").on("click", function () {
     song.trigger("play");
     isPlaying = true;
@@ -47,23 +48,33 @@ $(document).ready(function () {
 
   $("#sweep").on("click", function (event) {
     event.preventDefault();
-
+    
 
    $("#sweepTitle").hide();
    $("#sweepGifDiv").show()
    $("#sweepSongDiv").show()
    $("#sweepShare").show()
 
-    $("#sweepPlay").on("click", function (event) {
-      event.preventDefault();
-      song.trigger("play");
-      isPlaying = true;
-    });
+  $("#sweepPlay").on("click", function (event) {
+    event.preventDefault();
+    song.trigger("play");
+    isPlaying = true;
   });
 
+  $("#sweepPause").on("click", function (event) {
+    event.preventDefault();
+    song.trigger("pause");
+    isPlaying = false;
+  }); 
+  });
   var isPlaying = false;
   var song = $("<audio>");
   $.get();
+
+
+
+
+
 
   function musicGrab() {
     var settings = {
@@ -89,6 +100,7 @@ $(document).ready(function () {
         newTitle.attr("class", "has-text-white");
         // audioPlayer.attr("class", "play")
         var newImg = $("<img>");
+        newImg.attr("class", "songClick")
         newTitle.text(musicData[i].title_short);
         newImg.attr("src", musicData[i].album.cover_medium);
         newImg.attr("name", musicData[i].preview);
@@ -98,15 +110,21 @@ $(document).ready(function () {
         // $("#divC").append(audioPlayer);
       }
 
-      $("img").on("click", function (event) {
+      $(".songClick").on("click", function (event) {
+        $("#sweepSongDiv").empty()
         song.attr("src", event.target.name);
         var selectedSong = event.target.name;
         sweepSong = selectedSong;
         var sweepPlay = $("<button>");
+        var sweepPause= $("<button>");
+        sweepPause.attr("id", "sweepPause");
         sweepPlay.attr("id", "sweepPlay");
+        sweepPause.text("Pause");
         sweepPlay.text("Play");
-        $("#sweepSongDiv").append(sweepPlay);
         $("#sweepSongDiv").append(song);
+        $("#sweepSongDiv").append(sweepPlay);
+        $("#sweepSongDiv").append(sweepPause);
+
         console.log(event.target.name);
       });
 
@@ -149,4 +167,6 @@ $(document).ready(function () {
       // }
     });
   }
+
+
 });
