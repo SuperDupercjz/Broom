@@ -2,6 +2,7 @@ $(document).ready(function () {
   var search = $("#Music").val();
   var sweepSong = "";
   var timeElement = $(".currentTime");
+  var sweepTime = $("#sweepTime")
   var secondsRemaining = 0;
   $("#sweepGifDiv").hide()
   $("#sweepSongDiv").hide()
@@ -57,20 +58,35 @@ $(document).ready(function () {
 
   $("#sweepPlay").on("click", function (event) {
     event.preventDefault();
+    song.prop("currentTime",0);
     song.trigger("play");
     isPlaying = true;
+    var timeIntervalId = setInterval(function () {
+      secondsRemaining++;
+      sweepTime.text("00:" + secondsRemaining);
+      $("#sweepValue").val(secondsRemaining);
+      if (secondsRemaining === 30) {
+        clearInterval(timeIntervalId);
+        secondsRemaining = 0;
+        // song.trigger("pause");
+        // isPlaying = false;
+      }
+
+     } , 1000);
+
   });
 
-  $("#sweepPause").on("click", function (event) {
-    event.preventDefault();
-    song.trigger("pause");
-    isPlaying = false;
-  }); 
+  // $("#sweepPause").on("click", function (event) {
+  //   event.preventDefault();
+  //   song.trigger("pause");
+  //   isPlaying = false;
+  // }); 
+
   });
+
   var isPlaying = false;
   var song = $("<audio>");
   $.get();
-
 
 
 
@@ -87,7 +103,7 @@ $(document).ready(function () {
         "x-rapidapi-key": "28fa3a645fmsh6347d64020ec954p186251jsn525605cce2a6",
       },
     };
-
+    
     $.ajax(settings).then(function (response) {
       console.log(response);
       var musicData = response.data;
@@ -112,20 +128,22 @@ $(document).ready(function () {
 
       $(".songClick").on("click", function (event) {
         $("#sweepSongDiv").empty()
+       
         song.attr("src", event.target.name);
         var selectedSong = event.target.name;
         sweepSong = selectedSong;
         var sweepPlay = $("<button>");
-        var sweepPause= $("<button>");
-        sweepPause.attr("id", "sweepPause");
+        // var sweepPause= $("<button>");
+        // sweepPause.attr("id", "sweepPause");
         sweepPlay.attr("id", "sweepPlay");
-        sweepPause.text("Pause");
+        sweepPlay.attr("class", "button is-primary")
+        // sweepPause.text("Pause");
         sweepPlay.text("Play");
         $("#sweepSongDiv").append(song);
         $("#sweepSongDiv").append(sweepPlay);
-        $("#sweepSongDiv").append(sweepPause);
+        // $("#sweepSongDiv").append(sweepPause);
 
-        console.log(event.target.name);
+        console.log(event.target);
       });
 
       // function makeSlider (){
