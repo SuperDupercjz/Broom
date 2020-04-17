@@ -14,138 +14,9 @@
 </head>
 
 <body>
- fixed-music-bugs
-    <section class="hero is-bold">
-        <div class=" duck hero-head">
-            <div class="container is-widescreen">
-                <div class=" notification">
-                    <nav class="breadcrumb is-centered is-large " aria-label="breadcrumbs">
-                        <ul>
-                            <li>
-                                <a href="https://twitter.com/explore">
-                                    <span class="icon is-large">
-                                        <i class="fab fa-twitter"></i>
-                                    </span>
-                                    <span>Twitter</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/login.php">
-                                    <span class="icon is-large">
-                                        <i class="fab fa-facebook-square"></i>
-                                    </span>
-                                    <span>Facebook</span>
-                                </a>
-                            </li>
-                            <li>
-                                <span class="icon is-large">
-                                    <i class="fas fa-broom"></i>
-                                </span>
-                                <span><strong>Broom!</strong></span>
-                                <span class="icon is-large">
-                                    <i class="fas fa-broom"></i>
-                                </span>
-                            </li>
-
-                            <li>
-                                <a href="https://www.instagram.com/accounts/login/">
-                                    <span class="icon is-large">
-                                        <i class="fab fa-instagram"></i>
-                                    </span>
-                                    <span>instagram</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://accounts.google.com/signup/v2/webcreateaccount?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fe-11-16048806fc444534657fefb78401743b-a5dde0ecb2e654f88750bfd8708150cbdeb4039b&flowName=GlifWebSignIn&flowEntry=SignUp">
-                                    <span class="icon is-large">
-                                        <i class="fas fa-envelope"></i>
-                                    </span>
-                                    <span>G-Mail</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-
-                </div>
-                </nav>
-            </div>
-        </div>
-        </div>
-    </section>
-
-
-    </div>
-    <div class=" duck container columns  is-marginless" style="margin: 0 auto !important;">
-        <div class="div1 column is-2">
-            <div class="card-image">
-                <figure class="image is-10x10">
-
-                    <img src="https://media2.giphy.com/media/9e2Yj8RtiGUQo/source.gif" alt="Placeholder image">
-                    <br>
-                    <img src="https://i.pinimg.com/originals/fb/d1/70/fbd170d166359b2290a54fba5b5c4703.gif">
-
-                    <br>
-                    <img src="https://media2.giphy.com/media/n5QEvg00tMmqc/source.gif" alt="Placeholder image">
-                </figure>
-            </div>
-        </div>
-
-        <div class=" div1 column is-8">
-            <p style="background-color: turquoise;"><strong>
-                <div id="sweepTitle" class="row1">Please select a gif and song and then press sweep</div>
-                <div id="sweepGifDiv" class="row2"></div>
-                <div id="sweepSongDiv" class="row3">
-                </div>
-                <div id="sweepShare" class="row4">
-                        <input id="sweepValue" class="time" type="range" min="0" max="30" value="0" />
-                        <span id="sweepTime" class="currentTime">00:00</span>/
-                        <span class="duration">00:30</span>
-                        <br>
-                    <button>Share</button></div>
-                
-                   </strong>
-            </p>
-        </div>
-        <div class="div1  column is-2">
-            <div class="card-image">
-                <figure class="image is-10x10">
-                    <img
-                        src="https://media1.tenor.com/images/f40c4fee2a6b0237f65a3daf7aed6f5d/tenor.gif?itemid=15486549">
-                    <br>
-                    <img src="https://i.pinimg.com/originals/8c/99/fc/8c99fc685049786fb1c5f5c87f400fad.gif">
-                    <br>
-                    <img src="https://thumbs.gfycat.com/DecimalQuerulousGosling-max-1mb.gif">
-
-
-                </figure>
-
-            </div>
-        </div>
-    </div>
-
-
-    <!-- <div class="div1">
-                        <p style="background-color: turquoise;"><strong>
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                in
-                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                                laborum."</strong>
-                        </p>
-                    </div> -->
 
 
 
-
-    <!-- bottom Delopment -->
-    <!-- new...........................................  -->
-
- master
 
 
     <div class="container">
@@ -167,7 +38,7 @@
 
 
                 <div id="divS" class="column is-2">
-                    <button id="sweep">Sweep</button>
+                    <button class="button is-primary has-text-black" id="sweep">Sweep</button>
                 </div>
                 <div id="divM" class="column is-5">
                     <input id="Music" type="text">
@@ -206,7 +77,13 @@
                         <div id="sweepTitle" class="row1">Please select a gif and song and then press sweep</div>
                         <div id="sweepGifDiv" class="row2"></div>
                         <div id="sweepSongDiv" class="row3"></div>
-                        <div id="sweepShare" class="row4"><button>Share</button></div>
+                        <div id="sweepShare" class="row4">
+                                <input id="sweepValue" class="time" type="range" min="0" max="7" value="0" />
+                                <span id="sweepTime" class="currentTime">00:00</span>/
+                                <span class="duration">00:07</span>
+                                <br>
+                            <button>Share</button>
+                        </div>
                         
                            </strong>
                     </p>
