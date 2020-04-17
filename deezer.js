@@ -4,6 +4,7 @@ $(document).ready(function () {
   var timeElement = $(".currentTime");
   var sweepTime = $("#sweepTime")
   var secondsRemaining = 0;
+  var sweepValueDiv = $("#sweepValue").val()
   $("#sweepGifDiv").hide()
   $("#sweepSongDiv").hide()
   $("#sweepShare").hide()
@@ -63,13 +64,13 @@ $(document).ready(function () {
     isPlaying = true;
     var timeIntervalId = setInterval(function () {
       secondsRemaining++;
-      sweepTime.text("00:" + secondsRemaining);
+      sweepTime.text("00:0" + secondsRemaining);
       $("#sweepValue").val(secondsRemaining);
-      if (secondsRemaining === 30) {
+      if (secondsRemaining === 7) {
         clearInterval(timeIntervalId);
         secondsRemaining = 0;
-        // song.trigger("pause");
-        // isPlaying = false;
+        song.trigger("pause");
+        isPlaying = false;
       }
 
      } , 1000);
@@ -136,7 +137,7 @@ $(document).ready(function () {
         // var sweepPause= $("<button>");
         // sweepPause.attr("id", "sweepPause");
         sweepPlay.attr("id", "sweepPlay");
-        sweepPlay.attr("class", "button is-primary")
+        sweepPlay.attr("class", "button is-primary has-text-black")
         // sweepPause.text("Pause");
         sweepPlay.text("Play");
         $("#sweepSongDiv").append(song);
