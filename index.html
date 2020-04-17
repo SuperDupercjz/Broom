@@ -14,6 +14,7 @@
 </head>
 
 <body>
+ fixed-music-bugs
     <section class="hero is-bold">
         <div class=" duck hero-head">
             <div class="container is-widescreen">
@@ -86,17 +87,22 @@
 
                     <br>
                     <img src="https://media2.giphy.com/media/n5QEvg00tMmqc/source.gif" alt="Placeholder image">
-                    
                 </figure>
             </div>
         </div>
 
         <div class=" div1 column is-8">
             <p style="background-color: turquoise;"><strong>
-                <div class="row1">box 1</div>
-                <div class="row2">box2</div>
-                <div class="row3">box3</div>
-                <div class="row4">box4</div>
+                <div id="sweepTitle" class="row1">Please select a gif and song and then press sweep</div>
+                <div id="sweepGifDiv" class="row2"></div>
+                <div id="sweepSongDiv" class="row3">
+                </div>
+                <div id="sweepShare" class="row4">
+                        <input id="sweepValue" class="time" type="range" min="0" max="30" value="0" />
+                        <span id="sweepTime" class="currentTime">00:00</span>/
+                        <span class="duration">00:30</span>
+                        <br>
+                    <button>Share</button></div>
                 
                    </strong>
             </p>
@@ -116,13 +122,36 @@
                     <br>
                     <img src="https://thumbs.gfycat.com/DecimalQuerulousGosling-max-1mb.gif">
 
+
                 </figure>
 
             </div>
         </div>
     </div>
 
-<br>
+
+    <!-- <div class="div1">
+                        <p style="background-color: turquoise;"><strong>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                laborum."</strong>
+                        </p>
+                    </div> -->
+
+
+
+
+    <!-- bottom Delopment -->
+    <!-- new...........................................  -->
+
+ master
+
 
     <div class="container">
         <div class="columns">
@@ -133,7 +162,7 @@
         </div>
 
 
-        <div class="container">
+        <div class="container gms">
 
             <div class="columns">
                 <div id="divG" class="column is-5">
@@ -150,8 +179,8 @@
                     <button id="musicButton" class="search">Search</button>
                     <div class="snd">
                         <div class="toggle">
-                            <button class="toggle-play">Play</button>
-                            <button class="toggle-pause">Pause</button>
+                            <button class="toggle-play">Preview</button>
+                            
                         </div>
                         <input class="time" type="range" min="0" max="7" value="0" />
                         <span class="currentTime">00:00</span>/
@@ -175,7 +204,136 @@
                 </div>
 
             </div>
-
+            <br>
+            <div class="container">
+                <div class=" div1 column is-12">
+                    <p style="background-color: turquoise;"><strong>
+                        <div id="sweepTitle" class="row1">Please select a gif and song and then press sweep</div>
+                        <div id="sweepGifDiv" class="row2"></div>
+                        <div id="sweepSongDiv" class="row3"></div>
+                        <div id="sweepShare" class="row4"><button>Share</button></div>
+                        
+                           </strong>
+                    </p>
+                </div>
+                <section class="hero is-bold nav">
+                    <div class=" duck hero-head">
+                        <div class="container is-widescreen">
+                            <div class=" notification">
+                                <nav class="breadcrumb is-centered is-large " aria-label="breadcrumbs">
+                                    <ul>
+                                        <li>
+                                            <a href="https://twitter.com/explore">
+                                                <span class="icon is-large">
+                                                    <i class="fab fa-twitter"></i>
+                                                </span>
+                                                <span>Twitter</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/login.php">
+                                                <span class="icon is-large">
+                                                    <i class="fab fa-facebook-square"></i>
+                                                </span>
+                                                <span>Facebook</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="icon is-large">
+                                                <i class="fas fa-broom"></i>
+                                            </span>
+                                            <span><strong>Broom!</strong></span>
+                                            <span class="icon is-large">
+                                                <i class="fas fa-broom"></i>
+                                            </span>
+                                        </li>
+            
+                                        <li>
+                                            <a href="https://www.instagram.com/accounts/login/">
+                                                <span class="icon is-large">
+                                                    <i class="fab fa-instagram"></i>
+                                                </span>
+                                                <span>instagram</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://accounts.google.com/signup/v2/webcreateaccount?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fe-11-16048806fc444534657fefb78401743b-a5dde0ecb2e654f88750bfd8708150cbdeb4039b&flowName=GlifWebSignIn&flowEntry=SignUp">
+                                                <span class="icon is-large">
+                                                    <i class="fas fa-envelope"></i>
+                                                </span>
+                                                <span>G-Mail</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+            
+                            </div>
+                            </nav>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+             <!-- <section class="hero is-bold nav">
+                <div class=" duck hero-head">
+                    <div class="container is-widescreen">
+                        <div class=" notification">
+                            <nav class="breadcrumb is-centered is-large " aria-label="breadcrumbs">
+                                <ul>
+                                    <li>
+                                        <a href="https://twitter.com/explore">
+                                            <span class="icon is-large">
+                                                <i class="fab fa-twitter"></i>
+                                            </span>
+                                            <span>Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/login.php">
+                                            <span class="icon is-large">
+                                                <i class="fab fa-facebook-square"></i>
+                                            </span>
+                                            <span>Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span class="icon is-large">
+                                            <i class="fas fa-broom"></i>
+                                        </span>
+                                        <span><strong>Broom!</strong></span>
+                                        <span class="icon is-large">
+                                            <i class="fas fa-broom"></i>
+                                        </span>
+                                    </li>
+        
+                                    <li>
+                                        <a href="https://www.instagram.com/accounts/login/">
+                                            <span class="icon is-large">
+                                                <i class="fab fa-instagram"></i>
+                                            </span>
+                                            <span>instagram</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://accounts.google.com/signup/v2/webcreateaccount?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fe-11-16048806fc444534657fefb78401743b-a5dde0ecb2e654f88750bfd8708150cbdeb4039b&flowName=GlifWebSignIn&flowEntry=SignUp">
+                                            <span class="icon is-large">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <span>G-Mail</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+        
+                        </div>
+                        </nav>
+                    </div>
+                </div>
+                </div>
+            </section> -->
+<br>
 
             <div class="tile is-ancestor ">
                 <div class="tile is-parent has-background-white">
@@ -222,7 +380,14 @@
                                         lacus, quis faucibus libero. Quisque non semper leo.</p>
                                 <p class="subtitle has-text-primary"></p>
                                 <div class="content has-text-primary">
-                                    <p> <a href=" https://github.com/SuperDupercjz" target="blank">I Started My Code Journey Because one day I went home, looked in the mirror and decided right there and then I was moving. I packed my bags, moved to Seattle from Arizona and applied at a lot of places. Finally I got a call back and it was FaceBook! they wanted me to restock their floors for their Web Developers & One day i asked a question to a Front-End Dev that changed my life forever, i asked is coding hard? He said it's only hard because I have to learn new things all the time, I have to solve Problems all the time. Right there at that moment I was Hooked. I went home and started coding on Team Treehouse. Now I am Here and I couldn't be more in love.  </a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at
+                                        erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam,
+                                        consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula
+                                        eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+                                    <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae
+                                        congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque
+                                        sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet
+                                        lacus, quis faucibus libero. Quisque non semper leo.</p>
                                 </div>
                             </div>
                         </article>
