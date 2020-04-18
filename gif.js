@@ -23,7 +23,7 @@ function getGif() {
     "https://api.giphy.com/v1/gifs/search?q=" +
     searchbtn +
     "&api_key=" +
-    apiKey +
+    apiKey2 +
     "&limit=25";
 
   $.ajax({
