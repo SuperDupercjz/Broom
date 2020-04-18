@@ -20,7 +20,7 @@ function getGif() {
   let apiKey = "xKN4dGbvzcxAxbXiNmxbIYlsls06zXY5";
   let apiKey2 = "pCaC6QPrv0rNrBd99YyoIX3eYDk9pHxC";
   var queryURL =
-    "http://api.giphy.com/v1/gifs/search?q=" +
+    "https://api.giphy.com/v1/gifs/search?q=" +
     searchbtn +
     "&api_key=" +
     apiKey +
