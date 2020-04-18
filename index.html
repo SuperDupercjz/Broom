@@ -22,21 +22,6 @@
         <br>
         <button>Share</button></div>
 
-    </strong>
-    </p>
-    </div>
-
-    </div>
-
-
-
-
-
-
-    <!-- bottom Delopment -->
-    <!-- new...........................................  -->
-
-
 
 
     <div class="container">
@@ -58,7 +43,7 @@
 
 
                 <div id="divS" class="column is-2">
-                    <button id="sweep">Sweep</button>
+                    <button class="button is-primary has-text-black" id="sweep">Sweep</button>
                 </div>
                 <div id="divM" class="column is-5">
                     <input id="Music" type="text">
@@ -94,12 +79,20 @@
             <div class="container">
                 <div class=" div1 column is-12">
                     <p style="background-color: turquoise;"><strong>
-                            <div id="sweepTitle" class="row1">Please select a gif and song and then press sweep</div>
-                            <div id="sweepGifDiv" class="row2"></div>
-                            <div id="sweepSongDiv" class="row3"></div>
-                            <div id="sweepShare" class="row4"><button>Share</button></div>
 
-                        </strong>
+                        <div id="sweepTitle" class="row1">Please select a gif and song and then press sweep</div>
+                        <div id="sweepGifDiv" class="row2"></div>
+                        <div id="sweepSongDiv" class="row3"></div>
+                        <div id="sweepShare" class="row4">
+                                <input id="sweepValue" class="time" type="range" min="0" max="7" value="0" />
+                                <span id="sweepTime" class="currentTime">00:00</span>/
+                                <span class="duration">00:07</span>
+                                <br>
+                            <button>Share</button>
+                        </div>
+                        
+                           </strong>
+
                     </p>
                 </div>
                 <section class="hero is-bold nav">
