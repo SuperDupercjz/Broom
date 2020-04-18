@@ -17,7 +17,7 @@ $(document).ready(() => {
 
 function getGif() {
   let searchbtn = $("#Giphy").val();
-  let apiKey = "dc6zaTOxFJmzC";
+  let apiKey = "xKN4dGbvzcxAxbXiNmxbIYlsls06zXY5";
   let apiKey2 = "pCaC6QPrv0rNrBd99YyoIX3eYDk9pHxC";
   var queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" +
