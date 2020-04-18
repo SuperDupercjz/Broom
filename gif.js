@@ -23,7 +23,7 @@ function getGif() {
     "https://api.giphy.com/v1/gifs/search?q=" +
     searchbtn +
     "&api_key=" +
-    apiKey2 +
+    apiKey +
     "&limit=25";
 
   $.ajax({
@@ -41,7 +41,7 @@ function getGif() {
     }
     $("img").on("click", (event) => {
       event.preventDefault();
-      $("#sweepGifDiv").empty()
+      $("#sweepGifDiv").empty();
 
       let gif = $("<img>");
       gif.attr("src", event.target.src);
